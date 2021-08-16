@@ -12,19 +12,44 @@
                 width: 860px;
                 height: 599px;
                 background: white;
-                border-width: 10px;
-              	border-color: green;
             }
           
+          	.second-section {
+          			position: relative;
+              	width: 860px;
+              	height: 739px;
+              	top: 599px;
+              	background: white;
+          	}
+          
             a {
-            	position: absolute;
-            	font-family: 'Inconsolata', monospace;
+            		position: absolute;
+            	  font-family: 'Inconsolata', monospace;
                 font-style: normal;
               	font-weight: 300;
               	font-size: 20px;
               	line-height: 21px;
           	    color: black;
                 
+            }
+            h1{
+            	position: absolute;
+            	font-family: "Amatic SC";
+              font-weight: 400;
+              font-style: normal;
+              font-size: 36px;
+              color: black;
+              margin: 7px 385px 687px 384px;
+            }
+            p{
+            	position: absolute;
+            	font-family: "Amatic SC";
+              font-weight: 400;
+              font-style: normal;
+              font-size: 20px;
+              line-height: 25px;
+              color: black;
+              
             }
 
            .pizza{
@@ -38,7 +63,8 @@
     </head>
 
     <body>
-      	<section class="first-section">
+
+      	<section id="home" class="first-section">
           <span>
             <a style="margin: 9px 700px 569px 120px;"href="#home">Home</a>
           	<a style="margin: 9px 498px 569px 312px;"href="#about">About</a>
@@ -47,5 +73,29 @@
           </span>
           <img class="pizza" src="https://github.com/willrei/ide-ps/blob/main/images/pizza_a.png?raw=true">
       	</section>
+      
+        <section id="menu" class="second-section">
+          <h1>THE MENU</h1>
+          
+          <p style="margin: 97px 565px 617px 232px;">MARGHERITA</p>
+          <p style="margin: 134px 0px 617px 232px;">Fresh tomatoes, fresh mozzarella, fresh basil - $12,50</p>
+          
+          <p style="margin: 200px 565px 617px 232px;">Formaggio</p>
+          <p style="margin: 237px 0px 617px 232px;">Four cheeses (Mozzarella, parmesan, pecorino, jarslberb) - $15,50</p>
+          
+          <p style="margin: 303px 565px 617px 232px;">Chicken</p>
+          <p style="margin: 340px 0px 617px 232px;">Fresh tomatoes, mozzarella, chicken, onions - $17,00</p>
+          
+          <p style="margin: 408px 0px 617px 232px;">Pineaplle ‘O’ clock</p>
+          <p style="margin: 445px 0px 617px 232px;">Fresh tomatoes, mozzarella, Fresh pineapple, bacon, fresh basil - $16,50</p>
+          
+          <p style="margin: 511px 565px 617px 232px;">Meat Town</p>
+          <p style="margin: 548px 0px 617px 232px;">Fresh tomatoes, mozzarella, hot pepperoni, hot sausage, beef, chicken</p>
+          
+          <p style="margin: 607px 565px 617px 232px;">Parma</p>
+          <p style="margin: 644px 0px 617px 232px;">Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
+        </section>
+
+
     </body>
 </html>
