@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inconsolata', monospace;
+    max-width: 450px;
+    min-width: 300px;
+    margin: auto;
+}
+
+.container > nav > div {
+    padding: 10px;
+    text-align: center;
+}
+
+.links {
+    display: flex;
+}
+
+.links > div {
+    padding: 10px;
+    text-align: center;
+    width: 100px;
+}

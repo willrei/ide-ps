@@ -1,221 +1,27 @@
 <!DOCTYPE html>
-<html>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap" rel="stylesheet">
-
+<html lang="en">
     <head>
-        <style>
-            .first-section {
-                position: relative;
-                width: 860px;
-                height: 599px;
-                background: white;
-            }
-          
-          	.second-section {
-          			position: relative;
-              	width: 860px;
-              	height: 739px;
-              	background: white;
-          	}
-          
-          	.third-section {
-          			position: relative;
-              	width: 860px;
-              	height: 709px;
-              	background: white;
-          	}
-          
-          	.fourth-section {
-          			position: relative;
-              	width: 860px;
-              	height: 547px;
-              	background: white;
-          	}
-          
-          	.fifth-section {
-          			position: absolute;
-              	width: 860px;
-              	height: 515px;
-              	background: white;
-          	}
-          
-            a {
-            		position: absolute;
-            	  font-family: 'Inconsolata', monospace;
-                font-style: normal;
-              	font-weight: 300;
-              	font-size: 20px;
-              	line-height: 21px;
-          	    color: black;
-              	text-decoration: none;
-            }
-          
-            h1 {
-            	position: absolute;
-            	font-family: "Amatic SC";
-              font-weight: 400;
-              font-style: normal;
-              font-size: 36px;
-              color: black;
-              
-            }
-          
-            .p-menu {
-            	position: absolute;
-            	font-family: "Amatic SC";
-              font-weight: 400;
-              font-style: normal;
-              font-size: 20px;
-              line-height: 25px;
-              color: black;
-            }
-          
-            .p-about {
-            	position: absolute;
-            	font-family: "Amatic SC";
-              font-weight: 400;
-              font-style: normal;
-              font-size: 16px;
-              line-height: 25px;
-              color: black;
-            }
-
-           .pizza {
-                position: absolute;
-                width: 860px;
-                height: 523px;
-                left: 0px;
-                top: 45px;
-            }
-          
-          	.restaurant {
-          			position: absolute;
-                width: 397px;
-                height: 245px;
-                left: 217px;
-                top: 236px;
-          	}
-          
-          	.map {
-          			position: absolute;
-              	width: 860px;
-              	height: 532px;
-              	top: -5px;
-          	}
-          
-          	.reservation {
-                position: absolute;
-              	width: 431px;
-              	height: 41px;
-              	background: rgba(196, 196, 196, 0.2);
-              	border-width: 0px;
-              	font-family: 'Amatic SC', cursive;
-              	font-style: normal;
-              	font-weight: 400;
-              	font-size: 14px;
-              	line-height: 18px;
-              	padding-left: 18px;
-          	}
-          
-          	.reservation-button {
-                position: absolute;
-              	width: 451px;
-              	height: 35px;
-              	background-color: #E7E7E7;
-              	border-width: 0px;
-              	font-family: 'Amatic SC', cursive;
-              	font-style: normal;
-              	font-weight: bold;
-              	font-size: 14px;
-              	line-height: 18px;
-              	text-align: center;
-          	}
-        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
     </head>
-
     <body>
-
-      	<section id="home" class="first-section">
-          <span>
-            <a style="margin: 9px 700px 569px 120px;"href="#home">Home</a>
-          	<a style="margin: 9px 498px 569px 312px;"href="#about">About</a>
-            <a style="margin: 9px 317px 569px 503px;"href="#menu">Menu</a>
-            <a style="margin: 9px 120px 569px 690px;"href="#where">Where</a>
-          </span>
-          <img class="pizza" src="https://github.com/willrei/ide-ps/blob/main/images/pizza_a.png?raw=true">
-      	</section>
-      
-        <section id="menu" class="second-section">
-          <h1 style="margin: 7px 385px 687px 384px;">THE MENU</h1>
-          
-          <p class="p-about" style="margin: 97px 565px 617px 232px;">MARGHERITA</p>
-          <p class="p-menu" style="margin: 134px 0px 617px 232px;">Fresh tomatoes, fresh mozzarella, fresh basil - $12,50</p>
-          
-          <p class="p-menu" style="margin: 200px 565px 617px 232px;">Formaggio</p>
-          <p class="p-menu" style="margin: 237px 0px 617px 232px;">Four cheeses (Mozzarella, parmesan, pecorino, jarslberb) - $15,50</p>
-          
-          <p class="p-menu" style="margin: 303px 565px 617px 232px;">Chicken</p>
-          <p class="p-menu" style="margin: 340px 0px 617px 232px;">Fresh tomatoes, mozzarella, chicken, onions - $17,00</p>
-          
-          <p class="p-menu" style="margin: 408px 0px 617px 232px;">Pineaplle ‘O’ clock</p>
-          <p class="p-menu" style="margin: 445px 0px 617px 232px;">Fresh tomatoes, mozzarella, Fresh pineapple, bacon, fresh basil - $16,50</p>
-          
-          <p class="p-menu" style="margin: 511px 565px 617px 232px;">Meat Town</p>
-          <p class="p-menu" style="margin: 548px 0px 617px 232px;">Fresh tomatoes, mozzarella, hot pepperoni, hot sausage, beef, chicken</p>
-          
-          <p class="p-menu" style="margin: 607px 565px 617px 232px;">Parma</p>
-          <p class="p-menu" style="margin: 644px 0px 617px 232px;">Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
+        <section class="container">
+            <nav class="links">
+                <div>Home</div>
+                <div>About</div>
+                <div>Menu</div>
+                <div>Where</div>
+            </nav>
+            <img src="images/pizza_a.png">
+            <h1>The Menu</h1>
+            <h1>About</h1>
+            <img src="images/map.png">
+            <h1>Contact</h1>
         </section>
-      
-      	<section id="about" class="third-section">
-          <h1 style="margin: 0px 399px 664px 398px">ABOUT</h1>
-          <p class="p-about" style="margin: 59px 250px 581px 220px;">The pizza restaurant was founded in lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.</p>
-          <p class="p-about" style="margin: 140px 489px 546px 217px;">The chef? Mr. Italiano Himself
-.</p>
-          <p class="p-about" style="margin: 175px 490px 511px 220px;">We are proud of our interiors
-</p>
-          <img class="restaurant" src="https://github.com/willrei/ide-ps/blob/main/images/onepage_restaurant.png?raw=true">
-          
-          <p class="p-about" style="margin: 500px 568px 568px 217px;">Opening hours</p>
-          
-          <p class="p-about" style="margin: 549px 554px 137px 217px;">Mon & Tue Closed</p>
-          <p class="p-about" style="margin: 549px 334px 137px 430px;">Friday 10.00 - 12.00</p>
-          
-          <p class="p-about" style="margin: 584px 525px 102px 217px;">Wednesday 10.00 - 24.00</p>
-          <p class="p-about" style="margin: 584px 319px 102px 430px;">Saturday 10.00 - 23.00</p>
-          
-          <p class="p-about" style="margin: 619px 533px 67px 217px;">Thursday 10.00 - 24.00</p>
-          <p class="p-about" style="margin: 619px 358px 67px 430px;">Sunday closed</p>
-               
-             
-          
-      	</section>
-      
-      	<section id="where" class="fourth-section">
-          	<img class="map" src="https://github.com/willrei/ide-ps/blob/main/images/map.png?raw=true">
-      	</section>
-      
-      	<section class="fifth-section">
-          	<h1 style="margin: 0px 390px 480px 403px; font-size: 28px;">CONTACT</h1>
-           	<p class="p-menu" style="margin: 63px 203px 427px 211px;">Find us at some address at some place.</p>
-          	<p class="p-menu" style="margin: 99px 197px 341px 212px;">FYI! We offer full-service catering fot any event, large or small. We understand your needs and will  cater the food to satisfy the biggest criteria of them all, both look and taste.</p>
-          	<p class="p-menu" style="margin: 193px 203px 297px 211px;">Reserve a table, ask for today’s special or just send us a message:</p>
-          
-          <form action="#">
-          <input class="reservation" style="margin: 244px 197px 230px 212px" type="text" placeholder="Name" required>
-          
-          <input class="reservation" style="margin: 298px 197px 176px 212px" type="text" placeholder="How many people" required>
-          
-          <input class="reservation" style="margin: 352px 197px 122px 212px" type="text" placeholder="16/11/2017 20:00" required>
-          
-          <input class="reservation" style="margin: 406px 197px 68px 212px" type="text" placeholder="Message \ Special requirements" required>
-          
-          <button class="reservation-button" style="margin: 460px 197px 20px 212px; text-align: center;" type="submit">SEND MESSAGE</button>
-          </form>
-      	</section>
-    
     </body>
 </html>
