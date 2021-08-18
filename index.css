@@ -1,56 +1,108 @@
 .container {
     display: flex;
     flex-direction: column;
-    font-family: 'Inconsolata', monospace;
-    max-width: 860px;
-    min-width: 300px;
+    max-width: 800px;
+    min-width: 460px;
     margin: auto;
 }
 
-.container > nav > div {
-    padding: 10px;
+.container h1 {
+    font-family: 'Amatic SC', cursive;
     text-align: center;
+    font-weight: 400;
+    font-size: 36px;
+    margin-top: 25px;
+    margin-bottom: 15px;
 }
 
 .links {
     display: flex;
-    justify-content: space-around;
 }
 
-.links > div {
-    padding: 10px;
-    text-align: center;
-    width: 100px;
-}
-h1{
-    font-family: "Amatic SC";
-    text-align: center;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 36px;
-}
-
-.p-menu > p{
-    margin-bottom: 41px;
-    font-family: "Amatic SC";
-    font-weight: 400;
-    font-style: normal;
+.links a {
+    font-family: 'Inconsolata', monospace;
     font-size: 20px;
-    line-height: 30px;
-    /*Nos casos que utilizei 'margin' foi pq não consegui ajustar com o flex*/ 
-    margin-left: 232px;
+    text-decoration: none;
+    margin: 15px;
+    flex-grow: 1;
+    text-align: center;
 }
-#about{
-    font-family: "Amatic SC";
-    font-weight: 400;
-    font-style: normal;
-    font-size: 18px;
-    line-height: 22px;
-    margin-left: 220px;
-    margin-right: 220px;
-}
-#opening-hours{
+
+.menu {
     display: flex;
-    justify-content: space-evenly;
-    margin-left: -95px;    
+    flex-direction: column;
+    align-self: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+    max-width: 400px;
+}
+
+.menu p {
+    line-height: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    font-family: 'Amatic SC', cursive;
+    max-width: 400px;
+    font-size: 18px;
+}
+
+.about > p {
+    text-align: left;
+    margin-block-start: auto;
+}
+
+.about > img {
+    width: 400px;
+    height: 245px;
+}
+
+.opening {
+    display: flex;
+}
+
+.opening p {
+    flex-grow: 1;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    line-height: 30px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+    max-width: 400px;
+}
+
+.contact > p {
+    margin-block-start: auto;
+}
+
+.contact > input {
+    font-family: 'Amatic SC', cursive;
+    font-size: 14px;
+    height: 40px;
+    padding-left: 15px;
+    padding-right: 10px;
+    background-color: rgba(196, 196, 196, 0.2);
+    border-width: 0px;
+    margin-bottom: 15px;
+}
+
+.contact > button {
+    font-family: 'Amatic SC', cursive;
+    font-size: 14px;
+    height: 35px;
+    background-color: #E7E7E7;
+    border-width: 0px;
+    margin-bottom: 15px;
+    font-weight: bold;
 }

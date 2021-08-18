@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Pizzeria</title>
         <link rel="stylesheet" href="index.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,14 +13,16 @@
     <body>
         <section class="container">
             <nav class="links">
-                <div>Home</div>
-                <div>About</div>
-                <div>Menu</div>
-                <div>Where</div>
+                <a href="#">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
             </nav>
+
             <img src="images/pizza_a.png">
-            <h1>The Menu</h1>
-            <section class="p-menu">
+
+            <h1 id="menu">The Menu</h1>
+            <section class="menu">
                 <p>
                     Margherita<br>
                     Fresh tomatoes, fresh mozzarella, fresh basil - $12,5
@@ -46,17 +48,20 @@
                     Fresh tomatoes, mozzarella, parma, bacon, fresh arugula
                 </p>
             </section>
-            <h1>About</h1>
-            <section id="about">
+
+            <h1 id="about">About</h1>
+            <section class="about">
                 <p>
                     The  pizza restaurant was founded in lorem ipsum dolor lorem ipsum dolor 
                     lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.
                </p>
                <p>The chef? Mr. Italiano Himself</p>
                <p>We are proud of our interiors</p>
+
                <img src="images/onepage_restaurant.png">
-               <p>Opening Hours</p>
-               <section id="opening-hours">
+
+               <div><p>Opening Hours</p></div>
+               <section class="opening">
                    <p>
                         Mon & Tue Closed<br>
                         Wednesday 10.00 - 24.00<br>
@@ -69,8 +74,20 @@
                  </p>
                </section>
             </section>
+
             <img src="images/map.png">
-            <h1>Contact</h1>
+
+            <h1 id="contact">Contact</h1>
+            <section class="contact">
+                <p>Find us at some address at some place.</p>
+                <p>FYI! We offer full-service catering fot any event, large or small. We understand your needs and will  cater the food to satisfy the biggest criteria of them all, both look and taste.</p>
+                <p>Reserve a table, ask for today’s special or just send us a message:</p>
+                <input type="text" placeholder="Name">
+                <input type="number" min="1" placeholder="How many people">
+                <input type="datetime-local" value="2017-11-16T20:00">
+                <input type="text" placeholder="Message \ Special requirements">
+                <button type="button">SEND MESSAGE</button>
+            </section>
         </section>
     </body>
 </html>
