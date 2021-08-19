@@ -1,14 +1,9 @@
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.themenu {
     max-width: auto;
     max-height: auto;
 }
-
-.container > div {
-    display: grid;
-    border: 5px solid black;
-    justify-content: center;
-    align-items: center;
-}
-
