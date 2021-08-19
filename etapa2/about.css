@@ -1,0 +1,67 @@
+.about{
+    min-height: 500px;
+    display: grid;
+    grid-column: 1/4;
+
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 20% 2fr 10%;
+    grid-template-areas: 
+        "about-header about-header about-header"
+        "about-empty about-information about-vazio"
+        "about-footer about-footer about-footer";
+
+    background: #8B5742;
+    color: white;
+    font-family: "Amatic SC";
+    font-size: 36px;
+}
+.about-header{
+    grid-area: about-header;
+    display: grid;
+    justify-self: center;
+    font-size: 36px;
+
+    
+}
+.about-information{
+    grid-area: about-information;
+    font-size: 18px;
+    
+    background: white;
+    color: black;
+
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.img1{
+    background: lightpink;
+    grid-column: 2/3;
+    grid-row: 2/4;
+}
+
+
+
+
+
+
+.about-footer{
+    grid-area: about-footer;
+
+    width: 100%;
+    height: 100%
+}
+.about-empty{
+    grid-area: about-empty;
+    
+    width: 100%;
+    height: 100%
+}
+.about-vazio{
+    grid-area: about-vazio;
+    
+    width: 100%;
+    height: 100%
+}
