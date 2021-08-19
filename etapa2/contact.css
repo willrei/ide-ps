@@ -26,6 +26,12 @@
     margin-top: 0;
 }
 
+.contact-info > p > mark {
+    color: white;
+    background-color: black;
+    padding-inline: 5px;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -33,7 +39,7 @@
 }
 
 .contact-form > p {
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 20px;
 }
 
