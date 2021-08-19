@@ -1,0 +1,92 @@
+.about{
+    min-height: 900px;
+    overflow: hidden;
+    
+    display: grid;
+    grid-column: 1/4;
+
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 10% 80% 1fr;
+    grid-template-areas: 
+        "about-header about-header about-header"
+        "about-empty about-information about-vazio"
+        "about-footer about-footer about-footer";
+
+    background: #8B5742;
+    color: white;
+    font-family: "Amatic SC";
+    font-size: 36px;
+
+    align-items: center;
+}
+.about-header{
+    grid-area: about-header;
+    display: grid;
+    justify-self: center;
+    font-size: 36px;
+
+    
+}
+.about-information{
+    grid-area: about-information;
+    font-size: 18px;
+
+    grid-row-gap: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.img-cooker{
+    grid-column: 2/3;
+    grid-row: 2/4;
+    justify-self: end;
+    align-self:center;
+
+}
+.cooker{
+    width:100px;
+    height: 75px;
+    border-radius: 50%;
+}
+.img-restaurant{
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+
+}
+.restaurant{
+    width: 100%;
+    height: 100%;
+}
+
+
+.opening-hours{
+    grid-column: 1/3;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 10px
+}
+
+
+
+
+.about-footer{
+    grid-area: about-footer;
+
+    width: 100%;
+    height: 100%
+}
+.about-empty{
+    grid-area: about-empty;
+    
+    width: 100%;
+    height: 100%
+}
+.about-vazio{
+    grid-area: about-vazio;
+    
+    width: 100%;
+    height: 100%
+}

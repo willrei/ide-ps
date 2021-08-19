@@ -1,6 +1,9 @@
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    align-self: center;
-    font-family: 'Amatic SC', cursive;
+}
+
+.themenu {
+    max-width: auto;
+    max-height: auto;
 }
