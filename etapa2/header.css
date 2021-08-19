@@ -1,0 +1,64 @@
+.header {
+    display: grid;
+    font-family: 'Amatic SC', cursive;
+    grid-template-rows: 1fr 12fr 1fr;
+    background-image: url(../images/pizza_b.png);
+    background-position: center;
+    background-size: cover;
+    grid-column: 1 / 4;
+    height: 500px;
+}
+
+.header > nav {
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.55);
+    color: white;
+}
+
+.header > nav > p {
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.header-middle {
+    display: flex;
+    align-self: center;
+    flex-flow: column;
+    text-align: center;
+    font-size: 60px;
+    color: white;
+}
+
+.header-middle > div {
+    margin: 5px;
+}
+
+.header-middle > a {
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+    background-color: black;
+    width: max-content;
+    align-self: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+}
+
+.header-bottom {
+    color: white;
+    font-size: 15px;
+    margin: 0;
+    width: max-content;
+    align-self: center;
+    background-color: black;
+    margin-left: 10px;
+    padding: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
