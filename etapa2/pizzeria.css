@@ -2,8 +2,5 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-self: center;
-}
-
-.container > div {
-    display: grid;
+    font-family: 'Amatic SC', cursive;
 }

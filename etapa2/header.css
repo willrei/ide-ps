@@ -1,6 +1,5 @@
 .header {
     display: grid;
-    font-family: 'Amatic SC', cursive;
     grid-template-rows: 1fr 12fr 1fr;
     background-image: url(../images/pizza_b.png);
     background-position: center;
