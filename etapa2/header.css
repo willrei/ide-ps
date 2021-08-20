@@ -16,10 +16,12 @@
     color: white;
 }
 
-.header > nav > p {
+.header > nav > a {
     margin: 0;
     padding-left: 10px;
     padding-right: 10px;
+    text-decoration: none;
+    color: white;
 }
 
 .header-middle {
@@ -47,6 +49,7 @@
     padding-top: 5px;
     padding-bottom: 5px;
     margin-top: 10px;
+    border-radius: 2px;
 }
 
 .header-bottom {
@@ -60,4 +63,5 @@
     padding: 5px;
     padding-top: 3px;
     padding-bottom: 3px;
+    border-radius: 2px;
 }

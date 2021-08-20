@@ -20,6 +20,7 @@
 
 .menu-plates {
     grid-area: menu-plates;
+    border-radius: 4px;
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(0, 0, 0, 0.8);
