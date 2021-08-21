@@ -10,25 +10,25 @@ starterSel.addEventListener('click', addStarter);
 function addPizza() {
     pizzaButtonActivated();
 
-    let menu = document.getElementById('food-items');
+    let menu = document.getElementById('menu-plates');
+    let oldItems = document.getElementById('food-items');
+    let items = document.createElement('div');
+    items.setAttribute('id', 'food-items');
+    items.setAttribute('class', 'food-items');
 
-    while(menu.firstChild){
-        menu.removeChild(menu.lastChild);
-    }
-
-    var file = "pizza.txt";
+    let file = "pizza.txt";
 
     fetch(file)
     .then(response => response.text())
-    .then(data =>{
-        var prato = data.split("\n");
-        var max = prato.length;
+    .then(data => {
+        let prato = data.split("\n");
+        let max = prato.length;
 
-        for(var i = 0; i <  max; i++){
+        for(let i = 0; i < max; i++) {
 
             let item = document.createElement('div');
             item.setAttribute('class', 'food-item');
-            menu.appendChild(item);
+            items.appendChild(item);
 
             let itemName = document.createElement('div');
             itemName.style.fontWeight = 'bold';
@@ -61,34 +61,36 @@ function addPizza() {
             item.appendChild(itemDesc);        
             
             if(i < (max-1)){
-                menu.appendChild(document.createElement('hr'));
+                items.appendChild(document.createElement('hr'));
             }
         }
+        console.log(items);
+        menu.replaceChild(items, oldItems);
     })
 }
 
 function addSalad(){
     saladButtonActivated();
 
-    let menu = document.getElementById('food-items');   
+    let menu = document.getElementById('menu-plates');
+    let oldItems = document.getElementById('food-items');
+    let items = document.createElement('div');
+    items.setAttribute('id', 'food-items');
+    items.setAttribute('class', 'food-items');
 
-    while(menu.firstChild){
-        menu.removeChild(menu.lastChild);
-    }
-
-    var file = "salad.txt";
+    let file = "salad.txt";
 
     fetch(file)
     .then(response => response.text())
     .then(data =>{
-        var prato = data.split("\n");
-        var max = prato.length;
+        let prato = data.split("\n");
+        let max = prato.length;
 
-        for(var i = 0; i <  max; i++){
+        for(let i = 0; i <  max; i++){
 
             let item = document.createElement('div');
             item.setAttribute('class', 'food-item');
-            menu.appendChild(item);
+            items.appendChild(item);
 
             let itemName = document.createElement('div');
             itemName.style.fontWeight = 'bold';
@@ -114,34 +116,36 @@ function addSalad(){
             item.appendChild(itemDesc);
             
             if(i < (max-1)){
-                menu.appendChild(document.createElement('hr'));
+                items.appendChild(document.createElement('hr'));
             }
         }
+        console.log(items);
+        menu.replaceChild(items, oldItems);
     })
 }
 
 function addStarter(){
     starterButtonActivated();
 
-    let menu = document.getElementById('food-items');
+    let menu = document.getElementById('menu-plates');
+    let oldItems = document.getElementById('food-items');
+    let items = document.createElement('div');
+    items.setAttribute('id', 'food-items');
+    items.setAttribute('class', 'food-items');
 
-    while(menu.firstChild){
-        menu.removeChild(menu.lastChild);
-    }
-
-    var file = "starter.txt";
+    let file = "starter.txt";
 
     fetch(file)
     .then(response => response.text())
     .then(data =>{
-        var prato = data.split("\n");
-        var max = prato.length;
+        let prato = data.split("\n");
+        let max = prato.length;
 
-        for(var i = 0; i <  max; i++){
+        for(let i = 0; i <  max; i++){
 
             let item = document.createElement('div');
             item.setAttribute('class', 'food-item');
-            menu.appendChild(item);
+            items.appendChild(item);
 
             let itemName = document.createElement('div');
             itemName.style.fontWeight = 'bold';
@@ -167,13 +171,15 @@ function addStarter(){
             item.appendChild(itemDesc);
             
             if(i < (max-1)){
-                menu.appendChild(document.createElement('hr'));
+                items.appendChild(document.createElement('hr'));
             }
         }
+        console.log(items);
+        menu.replaceChild(items, oldItems);
     })
 }
 
-function pizzaButtonActivated(){
+function pizzaButtonActivated() {
     document.getElementById('pizza-selector').classList.add('menu-type-selected');
     document.getElementById('pizza-selector').classList.remove('menu-type');
     document.getElementById('salad-selector').classList.add('menu-type');
@@ -181,7 +187,8 @@ function pizzaButtonActivated(){
     document.getElementById('starter-selector').classList.add('menu-type');
     document.getElementById('starter-selector').classList.remove('botao-selec');
 }
-function saladButtonActivated(){
+
+function saladButtonActivated() {
     document.getElementById('pizza-selector').classList.add('menu-type');
     document.getElementById('pizza-selector').classList.remove('menu-type-selected');
     document.getElementById('salad-selector').classList.add('menu-type-selected');
@@ -189,7 +196,8 @@ function saladButtonActivated(){
     document.getElementById('starter-selector').classList.add('menu-type');
     document.getElementById('starter-selector').classList.remove('menu-type-selected');
 }
-function starterButtonActivated(){
+
+function starterButtonActivated() {
     document.getElementById('pizza-selector').classList.add('menu-type');
     document.getElementById('pizza-selector').classList.remove('menu-type-selected');
     document.getElementById('salad-selector').classList.add('menu-type');
