@@ -71,7 +71,7 @@
 }
 
 .hot {
-    background-color: rgb(244, 67, 54);
+    background-color: rgba(244, 67, 54, 1);
     color: white;
     width: min-content;
     padding: 1px 6px 1px 6px;
