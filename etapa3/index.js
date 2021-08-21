@@ -1,19 +1,18 @@
 let pizzaSel = document.getElementById('pizza-selector');
 pizzaSel.addEventListener('click', addPizza);
-pizzaSel.addEventListener('mouseenter', pizzaEnter);
-pizzaSel.addEventListener('mouseleave', pizzaLeave);
 
-function pizzaEnter() {
-    pizzaSel.style.backgroundColor = 'rgba(244, 67, 54, 0)';
-    pizzaSel.style.color = 'black';
-}
 
-function pizzaLeave() {
-    pizzaSel.style.backgroundColor = 'rgba(244, 67, 54, 1)';
-    pizzaSel.style.color = 'white';
-}
+let saladSel = document.getElementById('salad-selector');
+saladSel.addEventListener('click', addSalad);
+
+let starterSel = document.getElementById('starter-selector');
+starterSel.addEventListener('click', addStarter);
+
+
 
 function addPizza() {
+    pizzaButtonActivated();
+
     let menu = document.getElementById('food-items');
 
     let item = document.createElement('div');
@@ -36,4 +35,40 @@ function addPizza() {
     menu.appendChild(document.createElement('hr'));
     menu.appendChild(item);
     console.log(menu);
+}
+
+function addStarter(){
+    starterButtonActivated();
+}
+
+function addSalad(){
+    saladButtonActivated();
+
+}
+
+
+
+function pizzaButtonActivated(){
+    document.getElementById('pizza-selector').classList.add('menu-type-selected');
+    document.getElementById('pizza-selector').classList.remove('menu-type');
+    document.getElementById('salad-selector').classList.add('menu-type');
+    document.getElementById('salad-selector').classList.remove('botao-selec');
+    document.getElementById('starter-selector').classList.add('menu-type');
+    document.getElementById('starter-selector').classList.remove('botao-selec');
+}
+function saladButtonActivated(){
+    document.getElementById('pizza-selector').classList.add('menu-type');
+    document.getElementById('pizza-selector').classList.remove('menu-type-selected');
+    document.getElementById('salad-selector').classList.add('menu-type-selected');
+    document.getElementById('salad-selector').classList.remove('menu-type');
+    document.getElementById('starter-selector').classList.add('menu-type');
+    document.getElementById('starter-selector').classList.remove('menu-type-selected');
+}
+function starterButtonActivated(){
+    document.getElementById('pizza-selector').classList.add('menu-type');
+    document.getElementById('pizza-selector').classList.remove('menu-type-selected');
+    document.getElementById('salad-selector').classList.add('menu-type');
+    document.getElementById('salad-selector').classList.remove('menu-type-selected');
+    document.getElementById('starter-selector').classList.add('menu-type-selected');
+    document.getElementById('starter-selector').classList.remove('menu-type');
 }

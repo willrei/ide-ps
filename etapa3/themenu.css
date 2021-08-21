@@ -33,14 +33,25 @@
     justify-content: space-evenly;
     font-size: 20px;
 }
+.menu-type-selected {
+    background-color: rgb(244, 67, 54); 
+    color: white;
+    display: grid;
+    place-items: center;
+    width: 100%;
 
+    cursor: pointer;
+}
 .menu-type {
     background: black;
     color: white;
     display: grid;
     place-items: center;
     width: 100%;
+
+    cursor: pointer;
 }
+
 
 .food-items {
     font-size: 20px;
