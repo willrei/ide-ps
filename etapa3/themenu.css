@@ -52,8 +52,8 @@
     cursor: pointer;
 }
 
-
 .food-items {
+    min-height: 300px;
     font-size: 20px;
     padding: 20px;
 }

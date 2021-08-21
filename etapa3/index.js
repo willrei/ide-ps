@@ -7,8 +7,6 @@ saladSel.addEventListener('click', addSalad);
 let starterSel = document.getElementById('starter-selector');
 starterSel.addEventListener('click', addStarter);
 
-
-
 function addPizza() {
     pizzaButtonActivated();
 
@@ -72,15 +70,10 @@ function addPizza() {
 function addSalad(){
     saladButtonActivated();
 
-    let menu = document.getElementById('food-items');
-    var qtdAtual = 0;
-
-    console.log(qtdAtual);
+    let menu = document.getElementById('food-items');   
 
     while(menu.firstChild){
         menu.removeChild(menu.lastChild);
-        qtdAtual++;
-        console.log(qtdAtual);
     }
 
     var file = "salad.txt";
