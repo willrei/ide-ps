@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pizzeria</title>
+        <script src="index.js" async></script>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="themenu.css">
+        <link rel="stylesheet" href="about.css">
+        <link rel="stylesheet" href="map.css">
+        <link rel="stylesheet" href="contact.css">
+        <link rel="stylesheet" href="footer.css">
+        <link rel="" href="footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    </head>
+
+    <body style="margin: 0;">
+        <div class="container">
+
+            <div class="header">
+                <nav>
+                    <a href="#">HOME</a>
+                    <a href="#menu">MENU</a>
+                    <a href="#about">ABOUT</a>
+                    <a href="#contact">CONTACT</a>
+                </nav>
+                <div class="header-middle">
+                    <div>THIN</div>
+                    <div>CRUST PIZZA</div>
+                    <a href="#menu">Let me see the menu</a>
+                </div>
+                <p class="header-bottom">Open from 10am to 12pm</p>
+            </div>
+
+            <div class="menu" id="menu">
+                <p class="menu-header">THE MENU</p>
+                <div class="menu-plates">
+                    <div class="menu-selector">
+                        <div class="menu-type" style="background-color: rgb(244, 67, 54); border-top-left-radius: 3px;">Pizza</div>
+                        <div class="menu-type">Salads</div>
+                        <div class="menu-type" style="border-top-right-radius: 3px">Starter</div>
+                    </div>
+
+                    <div id="food-items" class="food-items">
+                        
+                        <div class="food-item">
+                            <div><strong>Margherita</strong></div>
+                            <div class="food-price">$12.50</div>
+                            <div>Fresh tomatoes,  fresh mozzarella, fresh basil</div>
+                        </div>
+                        <hr>
+                        
+                        <div class="food-item">
+                            <div><strong>Formaggio</strong></div>
+                            <div class="food-price">$15.50</div>
+                            <div>Four cheeses (Mozzarella, parmesan, pecorino, jarslberb)</div>
+                        </div>
+                        <hr>
+
+                        <div class="food-item">
+                            <div><strong>Chicken</strong></div>
+                            <div class="food-price">$17.00</div>
+                            <div>Fresh tomatoes, mozzarella, chicken, onions</div>
+                        </div>
+                        <hr>
+
+                        <div class="food-item">
+                            <div><strong>Pineapple 'O' Clock</strong></div>
+                            <div class="food-price">$16.50</div>
+                            <div>Fresh tomatoes, mozzarella, Fresh pineapple, bacon, fresh basil</div>
+                        </div>
+                        <hr>
+
+                        <div class="food-item">
+                            <div><strong>Meat Town</strong><mark class="hot">Hot!</mark></div>
+                            <div class="food-price">$20.00</div>
+                            <div>Fresh tomatoes, mozzarella, hot pepperoni, hot sausage, beef, chicken</div>
+                        </div>
+                        <hr>               
+
+                        <div class="food-item">
+                            <div><strong>Parma</strong><mark class="new">New</mark></div>
+                            <div class="food-price">$21.50</div>
+                            <div>Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</div>
+                        </div>
+
+                    </div>              
+                </div>
+                <div class="menu-footer"></div>
+            </div>
+
+            <div class="about" id="about">
+                <p class="about-header">About</p>
+
+                <div class="about-information">
+                    <div style="grid-column: 1/3">
+                        The pizza restaurant was founded in lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                    <div><strong>The chef?</strong> Mr. Italiano Himself</div>
+                    <div class="img-cooker"></div>
+                    <div>We are proud of our interiors</div>
+                    
+                    <div class="img-restaurant">
+                        <img class="restaurant" src="../images/imagesSVG/onepage_restaurant 1.svg">                
+                    </div>
+                    <div style="grid-column: 1/3; font-weight: bold; font-size: 25px;">Opening Hours</div>
+
+                    <div class="opening-hours">
+                        <div style="grid-area: 1/1/2/2">Mon & Tue Closed</div>
+                        <div style="grid-area: 2/1/3/2">Wednesday 10.00 - 24.00</div>
+                        <div style="grid-area: 3/1/4/2">Thursday 10.00 - 24.00</div>
+
+                        <div style="grid-area: 1/2/2/3">Friday 10.00 - 12.00</div>
+                        <div style="grid-area: 2/2/3/3">Saturday 10.00 - 23.00</div>
+                        <div style="grid-area: 3/2/4/3">Sunday Closed</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map"></div>
+
+            <div class="contact" id="contact">
+                <div class="contact-content">
+                    <p class="contact-top">Contact</p>
+                    <div class="contact-info">
+                        <p>Find us at some address at some place or call us at 05050515-122330</p>
+                        <p><mark>FYI!</mark> We offer full-service catering fot any event, large or small. We understand your needs and will  cater the food to satisfy the biggest criteria of them all, both look and taste.</p>
+                    </div>
+                    <form class="contact-form">
+                        <p><strong>Reserve</strong> a table, ask for today’s special or just send us a message:</p>
+                        <input type="text" placeholder="Name">
+                        <input type="number" min="1" placeholder="How many people">
+                        <input type="datetime-local" value="2017-11-16T20:00">
+                        <input type="text" placeholder="Message \ Special requirements">
+                        <button type="button">SEND MESSAGE</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer"></div>
+        </div>
+        
+    </body>
+
+</html>

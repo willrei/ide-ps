@@ -1,0 +1,64 @@
+.contact {
+    display: grid;
+    grid-column: 1 / 4;
+    background-color: rgb(108, 122, 129);
+    color: white;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.contact-top {
+    font-size: 35px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    font-size: 20px;
+}
+
+.contact-info > p {
+    margin-top: 0;
+}
+
+.contact-info > p > mark {
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+}
+
+.contact-form > p {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.contact-form > input {
+    height: 35px;
+    margin-bottom: 15px;
+    border-width: 0;
+    border-radius: 2px;
+    padding-left: 10px;
+    padding-right: 5px;
+    font-family: 'Amatic SC', cursive;
+}
+
+.contact-form > button {
+    height: 30px;
+    border-width: 0;
+    border-radius: 2px;
+    font-family: 'Amatic SC', cursive;
+}

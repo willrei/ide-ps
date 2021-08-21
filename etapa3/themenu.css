@@ -1,0 +1,93 @@
+.menu {
+    display: grid;
+    grid-column: 1 / 4;
+    grid-template-rows: 2fr auto 1fr;
+    grid-template-columns: 1fr 550px 1fr;
+    grid-template-areas:
+        "menu-header menu-header menu-header"
+        "menu-empty menu-plates menu-vazio"
+        "menu-footer menu-footer menu-footer";
+    background: black;
+    font-family: "Amatic SC";
+}
+
+.menu-header {
+    grid-area: menu-header;
+    font-size: 35px;
+    color: white;
+    justify-self: center;
+}
+
+.menu-plates {
+    grid-area: menu-plates;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    background-color: white;
+}
+
+.menu-selector {
+    display: flex;
+    height: 45px;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+.menu-type {
+    background: black;
+    color: white;
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+
+.food-items {
+    font-size: 20px;
+    padding: 20px;
+}
+
+.food-items > hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top: 1px;
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+.food-item {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+}
+
+.food-price {
+    text-align: end;
+    width: max-content;
+    margin-left: auto;
+    margin-right: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 1px 6px 1px 6px;
+    border-radius: 2px;
+}
+
+.hot {
+    background-color: rgb(244, 67, 54);
+    color: white;
+    width: min-content;
+    padding: 1px 6px 1px 6px;
+    border-radius: 2px;
+    margin-left: 6px;
+}
+
+.new {
+    background-color: rgba(0, 0, 0, 0.25);
+    width: min-content;
+    padding: 1px 6px 1px 6px;
+    border-radius: 2px;
+    margin-left: 6px;
+}
+
+.menu-footer {
+    grid-area: menu-footer;
+    color: black;
+}

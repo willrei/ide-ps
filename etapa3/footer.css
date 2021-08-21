@@ -1,0 +1,6 @@
+.footer {
+    display: grid;
+    grid-column: 1 / 4;
+    background-color: black;
+    height: 50px;
+}
