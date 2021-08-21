@@ -30,25 +30,38 @@ function addPizza() {
 
             let item = document.createElement('div');
             item.setAttribute('class', 'food-item');
+            menu.appendChild(item);
 
             let itemName = document.createElement('div');
             itemName.style.fontWeight = 'bold';
             itemName.textContent = prato[i];
+            item.appendChild(itemName);
             i++;
-
+            if(i == 13){
+                let itemTag = document.createElement("MARK");
+                itemTag.setAttribute('class', 'hot');
+                itemTag.textContent = prato[i];
+                itemName.appendChild(itemTag);
+                i++;
+            }
+            else if(i == 17){
+                let itemTag = document.createElement("MARK");
+                itemTag.setAttribute('class', 'new');
+                itemTag.textContent = prato[i];
+                itemName.appendChild(itemTag);
+                i++;
+            }
+        
             let itemPrice = document.createElement('div');
             itemPrice.setAttribute('class', 'food-price');
             itemPrice.textContent = prato[i];
+            item.appendChild(itemPrice);
             i++;
 
             let itemDesc = document.createElement('div');
             itemDesc.textContent = prato[i];
+            item.appendChild(itemDesc);        
             
-
-            menu.appendChild(item);
-            item.appendChild(itemName);
-            item.appendChild(itemPrice);
-            item.appendChild(itemDesc);
             if(i < (max-1)){
                 menu.appendChild(document.createElement('hr'));
             }
@@ -60,9 +73,14 @@ function addSalad(){
     saladButtonActivated();
 
     let menu = document.getElementById('food-items');
+    var qtdAtual = 0;
+
+    console.log(qtdAtual);
 
     while(menu.firstChild){
         menu.removeChild(menu.lastChild);
+        qtdAtual++;
+        console.log(qtdAtual);
     }
 
     var file = "salad.txt";
@@ -77,25 +95,31 @@ function addSalad(){
 
             let item = document.createElement('div');
             item.setAttribute('class', 'food-item');
+            menu.appendChild(item);
 
             let itemName = document.createElement('div');
             itemName.style.fontWeight = 'bold';
             itemName.textContent = prato[i];
+            item.appendChild(itemName);
             i++;
+            if(i == 1){
+                let itemTag = document.createElement("MARK");
+                itemTag.setAttribute('class', 'new');
+                itemTag.textContent = prato[i];
+                itemName.appendChild(itemTag);
+                i++;
+            }
 
             let itemPrice = document.createElement('div');
             itemPrice.setAttribute('class', 'food-price');
             itemPrice.textContent = prato[i];
+            item.appendChild(itemPrice);
             i++;
 
             let itemDesc = document.createElement('div');
             itemDesc.textContent = prato[i];
-            
-
-            menu.appendChild(item);
-            item.appendChild(itemName);
-            item.appendChild(itemPrice);
             item.appendChild(itemDesc);
+            
             if(i < (max-1)){
                 menu.appendChild(document.createElement('hr'));
             }
@@ -124,48 +148,37 @@ function addStarter(){
 
             let item = document.createElement('div');
             item.setAttribute('class', 'food-item');
+            menu.appendChild(item);
 
             let itemName = document.createElement('div');
             itemName.style.fontWeight = 'bold';
             itemName.textContent = prato[i];
+            item.appendChild(itemName);
             i++;
+            if(i == 1){
+                let itemTag = document.createElement("MARK");
+                itemTag.setAttribute('class', 'new');
+                itemTag.textContent = prato[i];
+                itemName.appendChild(itemTag);
+                i++;
+            }
 
             let itemPrice = document.createElement('div');
             itemPrice.setAttribute('class', 'food-price');
             itemPrice.textContent = prato[i];
+            item.appendChild(itemPrice);
             i++;
 
             let itemDesc = document.createElement('div');
             itemDesc.textContent = prato[i];
-            
-
-            menu.appendChild(item);
-            item.appendChild(itemName);
-            item.appendChild(itemPrice);
             item.appendChild(itemDesc);
+            
             if(i < (max-1)){
                 menu.appendChild(document.createElement('hr'));
             }
         }
     })
 }
-
-/*
-function readTextFile(file)
-{
-    
-    fetch(file)
-    .then(response => response.text())
-    .then(data =>{
-        var prato = data.split("\n");
-        var max = prato.length;
-
-        for(var i = 0; i <  max; i++){
-            console.log(prato[i]);
-        }
-    })
-    
-}*/
 
 function pizzaButtonActivated(){
     document.getElementById('pizza-selector').classList.add('menu-type-selected');

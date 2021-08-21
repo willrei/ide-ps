@@ -75,12 +75,10 @@
     margin-left: auto;
     margin-right: 0;
     color: white;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: #696969;
     padding: 1px 6px 1px 6px;
     border-radius: 2px;
 }
-
-
 
 .hot {
     background-color: rgba(244, 67, 54, 1);
@@ -89,14 +87,16 @@
     padding: 1px 6px 1px 6px;
     border-radius: 2px;
     margin-left: 6px;
+    font-weight: lighter;
 }
 
 .new {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: grey;
     width: min-content;
     padding: 1px 6px 1px 6px;
     border-radius: 2px;
     margin-left: 6px;
+    font-weight: lighter;
 }
 
 .menu-footer {
