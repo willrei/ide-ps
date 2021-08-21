@@ -1,11 +1,91 @@
+let navButtons = document.getElementsByClassName('nav-button');
+for (let i = 0; i < navButtons.length; i++) {
+    navButtons[i].addEventListener('mouseenter', enterNavButton);
+    navButtons[i].addEventListener('mouseleave', leaveNavButton);
+}
+
+function enterNavButton() {
+    this.style.backgroundColor = 'rgba(0, 0, 0, 1)';
+}
+
+function leaveNavButton() {
+    this.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+}
+
+let headerButton = document.getElementById('header-button');
+headerButton.addEventListener('mouseenter', enterHeaderButton);
+headerButton.addEventListener('mouseleave', leaveHeaderButton);
+
+function enterHeaderButton() {
+    headerButton.style.backgroundColor = 'rgba(0, 0, 0, 1)';
+}
+
+function leaveHeaderButton() {
+    headerButton.style.backgroundColor = 'rgba(0, 0, 0, 0.55)';
+}
+
+let formButton = document.getElementById('form-button');
+formButton.addEventListener('mouseenter', enterFormButton);
+formButton.addEventListener('mouseleave', leaveFormButton);
+
+function enterFormButton() {
+    formButton.style.backgroundColor = 'rgb(190, 190, 190)';
+}
+
+function leaveFormButton() {
+    formButton.style.backgroundColor = 'rgb(230, 230, 230)';
+}
+
 let pizzaSel = document.getElementById('pizza-selector');
 pizzaSel.addEventListener('click', addPizza);
+pizzaSel.addEventListener('mouseenter', enterPizza);
+pizzaSel.addEventListener('mouseleave', leavePizza);
 
 let saladSel = document.getElementById('salad-selector');
 saladSel.addEventListener('click', addSalad);
+saladSel.addEventListener('mouseenter', enterSalad);
+saladSel.addEventListener('mouseleave', leaveSalad);
 
 let starterSel = document.getElementById('starter-selector');
 starterSel.addEventListener('click', addStarter);
+starterSel.addEventListener('mouseenter', enterStarter);
+starterSel.addEventListener('mouseleave', leaveStarter);
+
+function enterPizza() {
+    if (pizzaSel.className === 'menu-type') {
+        pizzaSel.className = 'menu-type-hovered';
+    }
+}
+
+function leavePizza() {
+    if (pizzaSel.className === 'menu-type-hovered') {
+        pizzaSel.className = 'menu-type';
+    }
+}
+
+function enterSalad() {
+    if (saladSel.className === 'menu-type') {
+        saladSel.className = 'menu-type-hovered';
+    }
+}
+
+function leaveSalad() {
+    if (saladSel.className === 'menu-type-hovered') {
+        saladSel.className = 'menu-type';
+    }
+}
+
+function enterStarter() {
+    if (starterSel.className === 'menu-type') {
+        starterSel.className = 'menu-type-hovered';
+    }
+}
+
+function leaveStarter() {
+    if (starterSel.className === 'menu-type-hovered') {
+        starterSel.className = 'menu-type';
+    }
+}
 
 function addPizza() {
     pizzaButtonActivated();
@@ -69,7 +149,7 @@ function addPizza() {
     })
 }
 
-function addSalad(){
+function addSalad() {
     saladButtonActivated();
 
     let menu = document.getElementById('menu-plates');
@@ -86,7 +166,7 @@ function addSalad(){
         let prato = data.split("\n");
         let max = prato.length;
 
-        for(let i = 0; i <  max; i++){
+        for(let i = 0; i < max; i++){
 
             let item = document.createElement('div');
             item.setAttribute('class', 'food-item');
@@ -124,7 +204,7 @@ function addSalad(){
     })
 }
 
-function addStarter(){
+function addStarter() {
     starterButtonActivated();
 
     let menu = document.getElementById('menu-plates');
@@ -141,7 +221,7 @@ function addStarter(){
         let prato = data.split("\n");
         let max = prato.length;
 
-        for(let i = 0; i <  max; i++){
+        for(let i = 0; i < max; i++){
 
             let item = document.createElement('div');
             item.setAttribute('class', 'food-item');
@@ -180,28 +260,19 @@ function addStarter(){
 }
 
 function pizzaButtonActivated() {
-    document.getElementById('pizza-selector').classList.add('menu-type-selected');
-    document.getElementById('pizza-selector').classList.remove('menu-type');
-    document.getElementById('salad-selector').classList.add('menu-type');
-    document.getElementById('salad-selector').classList.remove('botao-selec');
-    document.getElementById('starter-selector').classList.add('menu-type');
-    document.getElementById('starter-selector').classList.remove('botao-selec');
+    pizzaSel.className = 'menu-type-selected';
+    saladSel.className = 'menu-type';
+    starterSel.className = 'menu-type';
 }
 
 function saladButtonActivated() {
-    document.getElementById('pizza-selector').classList.add('menu-type');
-    document.getElementById('pizza-selector').classList.remove('menu-type-selected');
-    document.getElementById('salad-selector').classList.add('menu-type-selected');
-    document.getElementById('salad-selector').classList.remove('menu-type');
-    document.getElementById('starter-selector').classList.add('menu-type');
-    document.getElementById('starter-selector').classList.remove('menu-type-selected');
+    pizzaSel.className = 'menu-type';
+    saladSel.className = 'menu-type-selected';
+    starterSel.className = 'menu-type';
 }
 
 function starterButtonActivated() {
-    document.getElementById('pizza-selector').classList.add('menu-type');
-    document.getElementById('pizza-selector').classList.remove('menu-type-selected');
-    document.getElementById('salad-selector').classList.add('menu-type');
-    document.getElementById('salad-selector').classList.remove('menu-type-selected');
-    document.getElementById('starter-selector').classList.add('menu-type-selected');
-    document.getElementById('starter-selector').classList.remove('menu-type');
+    pizzaSel.className = 'menu-type';
+    saladSel.className = 'menu-type';
+    starterSel.className = 'menu-type-selected';
 }
