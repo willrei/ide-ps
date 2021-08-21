@@ -69,7 +69,6 @@
     display: grid;
     grid-template-columns: 6fr 1fr;
 }
-
 .food-price {
     text-align: end;
     width: max-content;
@@ -80,6 +79,8 @@
     padding: 1px 6px 1px 6px;
     border-radius: 2px;
 }
+
+
 
 .hot {
     background-color: rgba(244, 67, 54, 1);

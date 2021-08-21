@@ -1,0 +1,12 @@
+Lasagna
+$13.50
+Special Sauce, Mozzarella, Parmesan, Ground Beef
+Ravioli
+$14.50
+Ravioli filled with cheese
+Spaghetti Classica
+$11.00
+Fresh tomatoes, onions, ground beef
+Seafood Pasta
+$25.50
+Salmon, shrimp, lobster, garlic
