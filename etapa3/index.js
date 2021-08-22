@@ -1,33 +1,39 @@
 let navButtons = document.getElementsByClassName('nav-button');
 for (let i = 0; i < navButtons.length; i++) {
-    navButtons[i].addEventListener('mouseenter', enterHeaderButton);
-    navButtons[i].addEventListener('mouseleave', leaveHeaderButton);
+    navButtons[i].addEventListener('mouseenter', enterButton);
+    navButtons[i].addEventListener('mouseleave', leaveButton);
 }
 
 let headerButton = document.getElementById('header-button');
-headerButton.addEventListener('mouseenter', enterHeaderButton);
-headerButton.addEventListener('mouseleave', leaveHeaderButton);
-
-function enterHeaderButton() {
-    this.style.backgroundColor = 'rgba(0, 0, 0, 1)';
-}
-
-function leaveHeaderButton() {
-    if (this.className === 'nav-button')
-        this.style.backgroundColor = 'rgba(0, 0, 0, 0)';
-    else this.style.backgroundColor = 'rgba(0, 0, 0, 0.55)';
-}
+headerButton.addEventListener('mouseenter', enterButton);
+headerButton.addEventListener('mouseleave', leaveButton);
 
 let formButton = document.getElementById('form-button');
-formButton.addEventListener('mouseenter', enterFormButton);
-formButton.addEventListener('mouseleave', leaveFormButton);
+formButton.addEventListener('mouseenter', enterButton);
+formButton.addEventListener('mouseleave', leaveButton);
 
-function enterFormButton() {
-    formButton.style.backgroundColor = 'rgb(190, 190, 190)';
+function enterButton() {
+    switch (this.className) {
+        case 'nav-button': 
+        case 'header-button':
+            this.style.backgroundColor = 'rgba(0, 0, 0, 1)';
+            break;
+        case 'form-button':
+            this.style.backgroundColor = 'rgb(190, 190, 190)';
+    }
 }
 
-function leaveFormButton() {
-    formButton.style.backgroundColor = 'rgb(230, 230, 230)';
+function leaveButton() {
+    switch (this.className) {
+        case 'nav-button':
+            this.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+            break;
+        case 'header-button':
+            this.style.backgroundColor = 'rgba(0, 0, 0, 0.55)';
+            break;
+        case 'form-button':
+            this.style.backgroundColor = 'rgb(230, 230, 230)';
+    }
 }
 
 let pizzaSel = document.getElementById('pizza-selector');
