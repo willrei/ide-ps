@@ -5,6 +5,10 @@
     min-width: 600px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
 }
