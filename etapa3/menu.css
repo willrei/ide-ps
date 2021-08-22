@@ -9,6 +9,7 @@
         "menu-footer menu-footer menu-footer";
     background: black;
     font-family: "Amatic SC";
+    transition: height 0.2s;
 }
 
 .menu-header {
@@ -101,6 +102,24 @@
 }
 
 .new {
+    background-color: grey;
+    width: min-content;
+    padding: 1px 6px 1px 6px;
+    border-radius: 2px;
+    margin-left: 6px;
+    font-weight: lighter;
+}
+
+.popular {
+    background-color: grey;
+    width: min-content;
+    padding: 1px 6px 1px 6px;
+    border-radius: 2px;
+    margin-left: 6px;
+    font-weight: lighter;
+}
+
+.seasonal {
     background-color: grey;
     width: min-content;
     padding: 1px 6px 1px 6px;

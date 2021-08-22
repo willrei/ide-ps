@@ -62,5 +62,6 @@
     border-radius: 2px;
     font-family: 'Amatic SC', cursive;
     cursor: pointer;
+    background-color: rgb(230, 230, 230);
     transition: background-color 0.2s;
 }

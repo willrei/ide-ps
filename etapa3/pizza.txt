@@ -1,20 +1,24 @@
 Margherita
+none
 $12.50
 Fresh tomatoes, fresh Mozzarella, fresh basil
 Formaggio
+none
 $15.50
 Four cheeses (Mozzarella, parmesan, pecorino, jarlsber)
 Chicken
+none
 $17.00
 Fresh tomatoes, Mozzarella, Chicken, onions
 Pineapple 'O' Clock
+none
 $16.50
 Fresh tomatoes, Mozzarella, fresh Pineapple, bacon, fresh basil
 Meat Town
-Hot!
+hot
 $20.00
 Fresh tomatoes, Mozzarella, hot pepporoni, hot sausage, beef, Chicken
 Parma
-New
+new
 $21.50
 fresh tomatoes, Mozzarella, Parma, bacon, fresh arugula
