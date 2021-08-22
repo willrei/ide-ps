@@ -38,52 +38,28 @@ function leaveFormButton() {
 
 let pizzaSel = document.getElementById('pizza-selector');
 pizzaSel.addEventListener('click', addPizza);
-pizzaSel.addEventListener('mouseenter', enterPizza);
-pizzaSel.addEventListener('mouseleave', leavePizza);
+pizzaSel.addEventListener('mouseenter', enterSelector);
+pizzaSel.addEventListener('mouseleave', leaveSelector);
 
 let saladSel = document.getElementById('salad-selector');
 saladSel.addEventListener('click', addSalad);
-saladSel.addEventListener('mouseenter', enterSalad);
-saladSel.addEventListener('mouseleave', leaveSalad);
+saladSel.addEventListener('mouseenter', enterSelector);
+saladSel.addEventListener('mouseleave', leaveSelector);
 
 let starterSel = document.getElementById('starter-selector');
 starterSel.addEventListener('click', addStarter);
-starterSel.addEventListener('mouseenter', enterStarter);
-starterSel.addEventListener('mouseleave', leaveStarter);
+starterSel.addEventListener('mouseenter', enterSelector);
+starterSel.addEventListener('mouseleave', leaveSelector);
 
-function enterPizza() {
-    if (pizzaSel.className === 'menu-type') {
-        pizzaSel.className = 'menu-type-hovered';
+function enterSelector() {
+    if (this.className === 'menu-type') {
+        this.className = 'menu-type-hovered';
     }
 }
 
-function leavePizza() {
-    if (pizzaSel.className === 'menu-type-hovered') {
-        pizzaSel.className = 'menu-type';
-    }
-}
-
-function enterSalad() {
-    if (saladSel.className === 'menu-type') {
-        saladSel.className = 'menu-type-hovered';
-    }
-}
-
-function leaveSalad() {
-    if (saladSel.className === 'menu-type-hovered') {
-        saladSel.className = 'menu-type';
-    }
-}
-
-function enterStarter() {
-    if (starterSel.className === 'menu-type') {
-        starterSel.className = 'menu-type-hovered';
-    }
-}
-
-function leaveStarter() {
-    if (starterSel.className === 'menu-type-hovered') {
-        starterSel.className = 'menu-type';
+function leaveSelector() {
+    if (this.className === 'menu-type-hovered') {
+        this.className = 'menu-type';
     }
 }
 
