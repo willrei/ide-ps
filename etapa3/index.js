@@ -1,15 +1,7 @@
 let navButtons = document.getElementsByClassName('nav-button');
 for (let i = 0; i < navButtons.length; i++) {
-    navButtons[i].addEventListener('mouseenter', enterNavButton);
-    navButtons[i].addEventListener('mouseleave', leaveNavButton);
-}
-
-function enterNavButton() {
-    this.style.backgroundColor = 'rgba(0, 0, 0, 1)';
-}
-
-function leaveNavButton() {
-    this.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+    navButtons[i].addEventListener('mouseenter', enterHeaderButton);
+    navButtons[i].addEventListener('mouseleave', leaveHeaderButton);
 }
 
 let headerButton = document.getElementById('header-button');
@@ -17,11 +9,13 @@ headerButton.addEventListener('mouseenter', enterHeaderButton);
 headerButton.addEventListener('mouseleave', leaveHeaderButton);
 
 function enterHeaderButton() {
-    headerButton.style.backgroundColor = 'rgba(0, 0, 0, 1)';
+    this.style.backgroundColor = 'rgba(0, 0, 0, 1)';
 }
 
 function leaveHeaderButton() {
-    headerButton.style.backgroundColor = 'rgba(0, 0, 0, 0.55)';
+    if (this.className === 'nav-button')
+        this.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+    else this.style.backgroundColor = 'rgba(0, 0, 0, 0.55)';
 }
 
 let formButton = document.getElementById('form-button');
