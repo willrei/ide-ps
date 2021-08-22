@@ -87,55 +87,58 @@ function starterButtonActivated() {
 
 let menu = document.getElementById('menu-plates');
 let menus = [];
-
 let files = ['pizza.txt', 'salad.txt', 'starter.txt'];
+createMenus();
 
-for (let file = 0; file < files.length; file++) {
-    let items = document.createElement('div');
-    items.setAttribute('id', 'food-items');
-    items.setAttribute('class', 'food-items');
+function createMenus() {
+    for (let file = 0; file < files.length; file++) {
+        let items = document.createElement('div');
+        items.setAttribute('id', 'food-items');
+        items.setAttribute('class', 'food-items');
 
-    fetch(files[file])
-    .then(response => response.text())
-    .then(data => {
-        let pratos = data.split('\r\n');
-        let max = pratos.length;
+        fetch(files[file])
+        .then(response => response.text())
+        .then(data => {
+            let pratos = data.split('\r\n');
+            let max = pratos.length;
 
-        for (let i = 0; i < max; i += 4) {
-            let item = document.createElement('div');
-            item.setAttribute('class', 'food-item');
-            items.appendChild(item);
+            for (let i = 0; i < max; i += 4) {
+                let item = document.createElement('div');
+                item.setAttribute('class', 'food-item');
+                items.appendChild(item);
 
-            let itemName = document.createElement('div');
-            itemName.style.fontWeight = 'bold';
-            itemName.textContent = pratos[i];
-            item.appendChild(itemName);
+                let itemName = document.createElement('div');
+                itemName.style.fontWeight = 'bold';
+                itemName.textContent = pratos[i];
+                item.appendChild(itemName);
 
-            if (pratos[i + 1] != 'none') {
-                let itemTag = document.createElement("mark");
-                switch (pratos[i + 1]) {
-                    case 'hot': itemTag.textContent = 'Hot!'; break;
-                    case 'new': itemTag.textContent = 'New'; break;
-                    case 'popular': itemTag.textContent = 'Popular'; break;
-                    case 'seasonal': itemTag.textContent = 'Seasonal'; break;
+                if (pratos[i + 1] != 'none') {
+                    let itemTag = document.createElement("mark");
+                    switch (pratos[i + 1]) {
+                        case 'hot': itemTag.textContent = 'Hot!'; break;
+                        case 'new': itemTag.textContent = 'New'; break;
+                        case 'popular': itemTag.textContent = 'Popular'; break;
+                        case 'seasonal': itemTag.textContent = 'Seasonal'; break;
+                    }
+                    itemTag.setAttribute('class', pratos[i + 1]);
+                    itemName.appendChild(itemTag);
                 }
-                itemTag.setAttribute('class', pratos[i + 1]);
-                itemName.appendChild(itemTag);
-            }
-            
-            let itemPrice = document.createElement('div');
-            itemPrice.setAttribute('class', 'food-price');
-            itemPrice.textContent = pratos[i + 2];
-            item.appendChild(itemPrice);
+                
+                let itemPrice = document.createElement('div');
+                itemPrice.setAttribute('class', 'food-price');
+                itemPrice.textContent = pratos[i + 2];
+                item.appendChild(itemPrice);
 
-            let itemDesc = document.createElement('div');
-            itemDesc.textContent = pratos[i + 3];
-            item.appendChild(itemDesc);        
-            
-            if ((i + 3) < (max - 1)){
-                items.appendChild(document.createElement('hr'));
+                let itemDesc = document.createElement('div');
+                itemDesc.textContent = pratos[i + 3];
+                item.appendChild(itemDesc);        
+                
+                if ((i + 3) < (max - 1)){
+                    items.appendChild(document.createElement('hr'));
+                }
             }
-        }
-    });
-    menus.push(items);
+        });
+        menus.push(items);
+    }
+    pizzaButtonActivated();
 }
