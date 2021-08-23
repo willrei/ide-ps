@@ -37,7 +37,8 @@ function leaveButton() {
 
 function buttonClicked() {
     let name = document.getElementById('name-field').value;
-    alert(`Message sent\nThank you for contacting us, ${name}!`);
+    if (name != '')
+        alert(`Message sent\nThank you for contacting us, ${name}!`);
 }
 
 /* ------------------------- menu buttons listeners ------------------------- */
