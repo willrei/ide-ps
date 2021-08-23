@@ -22,7 +22,8 @@
     align-items: center;
     justify-content: center;
     margin: 0;
-    width: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
     text-decoration: none;
     color: white;
     height: 100%;

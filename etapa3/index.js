@@ -35,6 +35,11 @@ function leaveButton() {
     }
 }
 
+function buttonClicked() {
+    let name = document.getElementById('name-field').value;
+    alert(`Message sent\nThank you for contacting us, ${name}!`);
+}
+
 /* ------------------------- menu buttons listeners ------------------------- */
 
 let pizzaSel = document.getElementById('pizza-selector');
@@ -88,6 +93,7 @@ function starterButtonActivated() {
 let menu = document.getElementById('menu-plates');
 let menus = [];
 let files = ['pizza.txt', 'salad.txt', 'starter.txt'];
+let attribs = ['hot', 'new', 'popular', 'seasonal'];
 createMenus();
 
 function createMenus() {
@@ -112,13 +118,13 @@ function createMenus() {
                 itemName.textContent = pratos[i];
                 item.appendChild(itemName);
 
-                if (pratos[i + 1] != 'none') {
+                if (attribs.includes(pratos[i + 1])) {
                     let itemTag = document.createElement("mark");
                     switch (pratos[i + 1]) {
                         case 'hot': itemTag.textContent = 'Hot!'; break;
                         case 'new': itemTag.textContent = 'New'; break;
                         case 'popular': itemTag.textContent = 'Popular'; break;
-                        case 'seasonal': itemTag.textContent = 'Seasonal'; break;
+                        case 'seasonal': itemTag.textContent = 'Seasonal';
                     }
                     itemTag.setAttribute('class', pratos[i + 1]);
                     itemName.appendChild(itemTag);

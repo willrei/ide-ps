@@ -3,6 +3,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     font-family: 'Amatic SC', cursive;
     min-width: 600px;
+    user-select: none;
 }
 
 html {
