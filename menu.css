@@ -65,7 +65,7 @@
 }
 
 .food-items {
-    height: 425px;
+    max-height: 425px;
     font-size: 20px;
     padding: 20px;
     overflow-x: hidden;
